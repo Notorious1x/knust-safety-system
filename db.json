@@ -1,0 +1,215 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "student@knust.edu.gh",
+      "password": "password123",
+      "full_name": "Kwame Mensah",
+      "student_id": "20801234",
+      "phone": "0241234567",
+      "role": "student",
+      "avatar": null,
+      "created_at": "2024-01-15T08:00:00Z"
+    },
+    {
+      "id": "u2",
+      "email": "security@knust.edu.gh",
+      "password": "security123",
+      "full_name": "Officer Boateng",
+      "phone": "0501347350",
+      "role": "security",
+      "security_code": "KNS123456",
+      "avatar": null,
+      "created_at": "2024-01-10T08:00:00Z"
+    },
+    {
+      "id": "u3",
+      "email": "guardian@gmail.com",
+      "password": "guardian123",
+      "full_name": "Ama Mensah",
+      "phone": "0209876543",
+      "role": "guardian",
+      "avatar": null,
+      "created_at": "2024-01-12T08:00:00Z"
+    }
+  ],
+  "sos_alerts": [
+    {
+      "id": "a1",
+      "user_id": "u1",
+      "user_name": "Kwame Mensah",
+      "user_phone": "0241234567",
+      "alert_type": "harassment",
+      "severity": "high",
+      "message": "Being followed near the library",
+      "latitude": 6.6745,
+      "longitude": -1.5716,
+      "status": "investigating",
+      "archived": false,
+      "created_at": "2024-03-15T22:30:00Z",
+      "updated_at": "2026-03-31T03:35:27.338Z",
+      "responder_id": "u2",
+      "responder_name": "Officer Boateng"
+    },
+    {
+      "user_id": "u1",
+      "user_name": "Kwame Mensah",
+      "user_phone": "0241234567",
+      "alert_type": "emergency",
+      "severity": "critical",
+      "latitude": 6.6745,
+      "longitude": -1.5716,
+      "message": "",
+      "status": "pending",
+      "created_at": "2026-03-31T03:30:52.875Z",
+      "updated_at": "2026-03-31T03:30:52.875Z",
+      "archived": false,
+      "id": "tkcwHDB"
+    }
+  ],
+  "safe_walks": [
+    {
+      "id": "sw1",
+      "user_id": "u1",
+      "user_name": "Kwame Mensah",
+      "destination": "Unity Hall",
+      "latitude": 6.6745,
+      "longitude": -1.5716,
+      "status": "completed",
+      "shared_with": [
+        "u3"
+      ],
+      "checkin_deadline": "2024-03-15T23:30:00Z",
+      "created_at": "2024-03-15T23:00:00Z",
+      "updated_at": "2026-03-31T03:32:38.914Z"
+    },
+    {
+      "user_id": "u1",
+      "user_name": "Kwame Mensah",
+      "destination": "Prempeh Library",
+      "latitude": 6.653984356223177,
+      "longitude": -1.5506217510729612,
+      "status": "completed",
+      "shared_with": [],
+      "checkin_deadline": "2026-03-31T04:02:53.682Z",
+      "created_at": "2026-03-31T03:32:53.682Z",
+      "updated_at": "2026-03-31T04:19:32.967Z",
+      "id": "eqfbboI"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "i1",
+      "user_id": "u1",
+      "user_name": "Kwame Mensah",
+      "title": "Suspicious person near ATM",
+      "description": "A man has been loitering near the campus ATM for over an hour, approaching students.",
+      "severity": "medium",
+      "location_description": "Main Campus ATM, near Admin Block",
+      "latitude": 6.675,
+      "longitude": -1.572,
+      "status": "investigating",
+      "created_at": "2024-03-14T18:45:00Z"
+    }
+  ],
+  "broadcasts": [
+    {
+      "id": "b1",
+      "created_by": "u2",
+      "created_by_name": "Officer Boateng",
+      "title": "Campus Security Alert",
+      "message": "All students are advised to avoid the back of Engineering Block after 8PM. Increased patrol in the area.",
+      "severity": "medium",
+      "created_at": "2024-03-15T20:00:00Z"
+    },
+    {
+      "id": "b2",
+      "created_by": "u2",
+      "created_by_name": "Officer Boateng",
+      "title": "Gate Closure Notice",
+      "message": "The North Gate will be closed from 11PM to 5AM for maintenance. Please use Main Gate.",
+      "severity": "low",
+      "created_at": "2024-03-14T16:00:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "user_id": "all",
+      "title": "Campus Security Alert",
+      "message": "All students are advised to avoid the back of Engineering Block after 8PM.",
+      "type": "broadcast",
+      "read": true,
+      "created_at": "2024-03-15T20:00:00Z"
+    },
+    {
+      "id": "n2",
+      "user_id": "u1",
+      "title": "Alert Update",
+      "message": "Your SOS alert is being investigated by security.",
+      "type": "sos",
+      "read": true,
+      "created_at": "2024-03-15T22:35:00Z"
+    },
+    {
+      "user_id": "all-security",
+      "title": "🚨 New SOS Alert",
+      "message": "Kwame Mensah triggered an emergency alert",
+      "type": "sos",
+      "read": false,
+      "created_at": "2026-03-31T03:30:53.227Z",
+      "id": "BIuCZlZ"
+    },
+    {
+      "user_id": "u3",
+      "title": "Safe Arrival ✅",
+      "message": "Kwame Mensah has checked in safely at Unity Hall",
+      "type": "safewalk",
+      "read": true,
+      "created_at": "2026-03-31T03:32:38.935Z",
+      "id": "_ygcFpe"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "c1",
+      "user_id": "u1",
+      "name": "Ama Mensah",
+      "phone": "0209876543",
+      "relationship": "Mother",
+      "email": "ama@gmail.com"
+    }
+  ],
+  "guardians": [
+    {
+      "id": "g1",
+      "student_id": "u1",
+      "guardian_user_id": "u3",
+      "name": "Ama Mensah",
+      "phone": "0209876543",
+      "relationship": "Mother",
+      "email": "guardian@gmail.com"
+    }
+  ],
+  "security_ids": [
+    {
+      "id": "sid1",
+      "code": "KNS123456",
+      "used": false,
+      "created_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "sid2",
+      "code": "KNS789012",
+      "used": false,
+      "created_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "sid3",
+      "code": "KNS345678",
+      "used": false,
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "settings": []
+}
