@@ -1,6 +1,42 @@
 const BASE = '/api'
 
+import { 
+  mockUsers, mockSosAlerts, mockSafeWalks, mockIncidents, 
+  mockBroadcasts, mockNotifications, mockContacts, mockGuardians, mockSecurityIds 
+} from './mockData.js'
+
+// Flag to use mock data (for deployed demo)
+const USE_MOCK_DATA = !window.location.hostname.includes('localhost')
+
+// Simulate network delay for realistic experience
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
 async function req(path, options = {}) {
+  if (USE_MOCK_DATA) {
+    await delay(500) // Simulate network delay
+    
+    // Return mock data based on the endpoint
+    if (path.includes('/users')) {
+      if (options?.method === 'POST') {
+        const newUser = JSON.parse(options.body)
+        newUser.id = Math.random().toString(36).substring(2)
+        return newUser
+      }
+      return mockUsers
+    }
+    if (path.includes('/sos_alerts')) return mockSosAlerts
+    if (path.includes('/safe_walks')) return mockSafeWalks
+    if (path.includes('/incidents')) return mockIncidents
+    if (path.includes('/broadcasts')) return mockBroadcasts
+    if (path.includes('/notifications')) return mockNotifications
+    if (path.includes('/contacts')) return mockContacts
+    if (path.includes('/guardians')) return mockGuardians
+    if (path.includes('/security_ids')) return mockSecurityIds
+    
+    return []
+  }
+
+  // Original API code (for development)
   const res = await fetch(`${BASE}${path}`, {
     headers: { 'Content-Type': 'application/json', ...options.headers },
     ...options,
